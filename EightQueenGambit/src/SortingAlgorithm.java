@@ -58,6 +58,7 @@ public class SortingAlgorithm {
     //if not, runs placeQueen.
     //Waits a second before exiting
     public void loop(int[][] board, int x, int y) {
+        System.out.println("Hi, my method has a silly name.");
         for (int k = y; k < 8; k++) {
             for (int z = x; z < 8; z++) {
                 if (findCheck(board, z, k)) {

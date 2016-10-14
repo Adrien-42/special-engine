@@ -46,20 +46,32 @@ public class ChessBoard {
         }
         while(check.queenCount !=8){
             board.printBoard(chessBoard);
-            for(int k = 7; k>=0; k--){
-                for(int z = 7; z>=0; z--){
+            System.out.println("Hi, I'm in the while loop");
+            for(int k = 7; k>0; k--){
+                for(int z = 7; z>0; z--){
+                    System.out.println("Hi, I'm cycling through the board");
+                    try {
+                        TimeUnit.SECONDS.sleep(1);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                     if(chessBoard[z][k]==1){
+                        System.out.println("Hi, I'm removing extra queens");
                         check.removeQueen(chessBoard,z,k);
-                        check.loop(chessBoard, k+1, z);
                         try {
                             TimeUnit.SECONDS.sleep(1);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
                         board.printBoard(chessBoard);
-
                     }
+                    check.loop(chessBoard, k+1, z);
                 }
+            }
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
         board.printBoard(chessBoard);
