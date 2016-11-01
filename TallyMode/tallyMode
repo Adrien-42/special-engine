@@ -1,0 +1,29 @@
+create an object called "TallyMode" that can be 
+initialized with an array of integers. 
+
+There is one method called "GetModes".
+
+Note: the Mode is the value that occurs most often
+in the array. If there are two values that occur
+the same number of times - the data array is called
+bimodal and both modes are returned in an array.
+
+The array is formed in the following way. Each index
+is considered the value, and the data at the index is
+the frequency of that value. 
+
+Ex: if the array is: 1, 2, 4, 3, 2, 4, 3, 6, 2 
+That array means that we have actual data of:
+0, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7, 7, 7, 8, 8
+
+In this case getModes would return an array of 
+ with the value 7 because 7 has a higher frequency
+ then any other. If two values tied for high frequency,
+ the array would contain both values.
+ 
+Problem 1: write the getModes function.
+
+Problem 2: write a function called "getKth" that returns
+the value of the Kth data point. For example, if the client
+called getKth(3), the value returned would be 1 (1 relative).
+If the client called getKth(9), 3 would be returned.
