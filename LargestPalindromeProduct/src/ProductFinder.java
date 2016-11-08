@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
 public class ProductFinder {
@@ -12,7 +13,7 @@ public class ProductFinder {
             subString3 = potentialPalindrome.substring((potentialPalindrome.length())/2, potentialPalindrome.length());
             subString2 = new StringBuffer(subString1).reverse().toString();
 
-            if(subString2==subString3){
+            if(Objects.equals(subString2, subString3)){
                 return true;
             }
             return false;
@@ -21,7 +22,7 @@ public class ProductFinder {
             subString3 = potentialPalindrome.substring((potentialPalindrome.length()+1)/2, potentialPalindrome.length());
             subString2 = new StringBuffer(subString1).reverse().toString();
 
-            if(subString2==subString3){
+            if(Objects.equals(subString2, subString3)){
                 return true;
             }
             return false;
@@ -34,9 +35,9 @@ public class ProductFinder {
             for(int j = 100; j <=999; j++){
                 if(palindromeChecker(i*j) && i*j > greatest){
                     greatest = i*j;
-                    System.out.println(greatest);
+                    System.out.println(greatest + " = "+ i + " * " + j);
                     try {
-                        TimeUnit.SECONDS.sleep(1);
+                        TimeUnit.MILLISECONDS.sleep(500);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
