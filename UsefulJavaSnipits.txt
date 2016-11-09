@@ -1,0 +1,58 @@
+Time Dealy
+try {
+     TimeUnit.MILLISECONDS.sleep(500);
+}catch (InterruptedException e) {
+     e.printStackTrace();
+}
+
+Check if a double d has a decimal value
+d % 1 == 0
+
+Prime Stuff:
+
+Check if a number is prime
+    public boolean primeChecker(int potentialPrime){
+        for(int i = 2; i < potentialPrime; i++){
+            if(potentialPrime==1){
+                return false;
+            }else if((potentialPrime%i)==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+Find Nth Prime
+public int primeCounter(int max){
+    int current = 1;
+    for(int i= 1; i <=max;){
+        current++;
+        if(primeChecker(current)){
+             i++;
+        }
+     }
+     return current;
+}
+
+Largest Prime Under or Equal to an Integer N
+
+public int largestPrime(int max){
+    int prime = 0;
+    for(int i = 1; i<=max; i++){
+        if(primeChecker(i)){
+            prime = i;
+        }
+    }
+    return prime;
+}
+
+Sum of All Primes Under or Equal to an Integer N
+public int primeSummer(int max){
+    int total =0;
+    for(int i =1; i <=max; i++){
+        if(primeChecker(i)){
+             total = total + i;
+       }
+    }
+    return total;
+}
