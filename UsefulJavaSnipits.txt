@@ -8,6 +8,18 @@ try {
 Check if a double d has a decimal value
 d % 1 == 0
 
+How to use Scanner
+import java.util.Scanner;
+
+public class Test{
+    public static void main(String[] args){
+        Scanner reader = new Scanner(System.in);
+        
+        int x = reader.nextInt();
+        double y = reader.nextDouble();
+    }
+}
+
 Prime Stuff:
 
 Check if a number is prime
