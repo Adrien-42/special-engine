@@ -6,7 +6,7 @@ public class TallyMode {
 
         for(int i=0; i < arr.length; i++){
             if (highest[0] < arr[i]){
-                highest[0] = arr[i];
+                highest[0] = arr[i]; //Switch to index
             }else if (highest[0] == arr[i]){
                 highest[placeInArray] = arr[i];
                 placeInArray++;
