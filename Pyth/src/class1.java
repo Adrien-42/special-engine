@@ -1,6 +1,6 @@
 public class class1 {
     //Returns side if valid, otherwise returns zero
-    public int triangleChecker(int x, int y){
+    public static int triangleChecker(int x, int y){
         int bigger;
         int smaller;
 
@@ -21,5 +21,11 @@ public class class1 {
             return (int)side2;
         }
         return 0;
+    }
+    public static void main(String[] args){
+        System.out.println(triangleChecker(3, 5));
+        System.out.println(triangleChecker(20, 12));
+        System.out.println(triangleChecker(20, 14));
+        System.out.println(triangleChecker(2, 2));
     }
 }
